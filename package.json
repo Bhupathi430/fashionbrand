@@ -1,0 +1,14 @@
+{
+  "name": "legion-risers-ecommerce",
+  "version": "1.0.0",
+  "description": "Legion Risers Luxury E-Commerce - iOS Glass UI Experience",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5",
+    "vite": "^6.2.0"
+  }
+}

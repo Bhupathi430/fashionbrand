@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Legion Risers Plain Polo Shirt | Nexure Studios Collaboration</title>
+  <meta name="description" content="Prebook the Legion Risers Plain Polo Shirt. ₹0 Prebooking Free, pay ₹649 on delivery. Full white iOS glass design, luxury heavyweight fabric.">
+  <link rel="icon" type="image/png" href="assets/legion_risers_clean.png">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <!-- Ambient Studio Lighting -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       OPENING LUXURY SHIRT UNFOLDING INTRO (2-3 Seconds)
+       ======================================================================== -->
+  <div class="intro-unfold-overlay" id="introOverlay" aria-label="Legion Risers Unveiling">
+    <div class="intro-ambient-light"></div>
+
+    <!-- Skip Button in top right -->
+    <button class="intro-skip-btn" id="introSkipBtn" type="button" aria-label="Skip Unfolding Animation">
+      <span>Skip</span>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </button>
+
+    <div class="intro-container">
+      <!-- Brand Header -->
+      <div class="intro-brand-block">
+        <img src="assets/legion_risers_clean.png" alt="Legion Risers Crest" class="intro-crest-logo">
+        <span class="intro-brand-title">LEGION RISERS</span>
+        <span class="intro-brand-subtitle">PLAIN POLO SHIRT • ARCHIVE 2026</span>
+      </div>
+
+      <!-- Photorealistic Cloth Physics Canvas Stage -->
+      <div class="unfold-canvas-stage">
+        <div class="unfold-canvas-shadow" id="unfoldCanvasShadow"></div>
+        <canvas id="unfoldCanvas" width="836" height="1104" class="unfold-canvas"></canvas>
+      </div>
+
+      <!-- Progress Capsule -->
+      <div class="intro-progress-capsule">
+        <div class="intro-progress-bar">
+          <div class="intro-progress-fill" id="introProgressFill"></div>
+        </div>
+        <span class="intro-loading-text" id="introLoadingText">UNFOLDING THE ARCHIVE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       TOP iOS DYNAMIC ISLAND (Clean Minimalist, No Status Bar / Blinking Dot)
+       ======================================================================== -->
+  <header class="ios-system-header">
+    <!-- DYNAMIC ISLAND (Top Center) -->
+    <div class="dynamic-island-wrapper">
+      <div class="dynamic-island" id="dynamicIsland" role="button" aria-expanded="false" title="Tap to expand Dynamic Island">
+        <!-- Compact Pill State -->
+        <div class="island-compact">
+          <span class="island-mini-badge">FREE</span>
+          <span>Prebooking Free • ₹649 on Delivery</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- Expanded Island State -->
+        <div class="island-expanded-content">
+          <div class="island-title-row">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="island-mini-badge">FREE</span>
+              <strong style="font-size: 0.85rem;">BATCH 01 RESERVATIONS</strong>
+            </div>
+            <span class="island-brand-tag">84% FILLED</span>
+          </div>
+
+          <div class="island-progress-bar">
+            <div class="island-progress-fill"></div>
+          </div>
+
+          <div class="island-stats-grid">
+            <div class="island-stat-item">
+              <span class="island-stat-label">Prebook Fee</span>
+              <span class="island-stat-value" style="color: var(--apple-green);">₹0 FREE</span>
+            </div>
+            <div class="island-stat-item">
+              <span class="island-stat-label">On Delivery</span>
+              <span class="island-stat-value">₹649 COD</span>
+            </div>
+          </div>
+
+          <button class="js-open-prebook" style="background: #ffffff; color: #000000; border: none; padding: 8px 14px; border-radius: 9999px; font-weight: 700; font-size: 0.8rem; cursor: pointer;">
+            Reserve My Size Now →
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       CORNER BRANDING BADGES
+       ======================================================================== -->
+  <!-- TOP-LEFT CORNER: Legion Risers Brand Emblem -->
+  <aside class="corner-badge corner-left">
+    <a href="#hero" class="brand-capsule" aria-label="Legion Risers Homepage">
+      <img src="assets/legion_risers_clean.png" alt="Legion Risers Eagle Crest" class="brand-logo-img">
+      <div class="brand-meta">
+        <span class="brand-name">Legion Risers</span>
+        <span class="brand-tagline">Est. 2026 • Haute Couture</span>
+      </div>
+    </a>
+  </aside>
+
+  <!-- TOP-RIGHT CORNER: Nexure Studios Collaboration Badge -->
+  <aside class="corner-badge corner-right">
+    <a href="#hero" class="nexure-capsule" aria-label="Nexure Studios Collaboration">
+      <img src="assets/nexure_studios_clean.png" alt="Nexure Studios Logo" class="nexure-logo-img">
+      <div class="nexure-meta">
+        <span class="nexure-collab-tag">Design Studio</span>
+        <span class="nexure-subtext">Official Partner</span>
+      </div>
+    </a>
+  </aside>
+
+  <!-- FLOATING CENTER NAVIGATION BAR (Segmented Control) -->
+  <nav class="ios-nav-bar" aria-label="Main Navigation">
+    <a href="#hero" class="nav-link active">Overview</a>
+    <a href="#scrollytelling" class="nav-link">Craftsmanship</a>
+    <a href="#anatomy" class="nav-link">Specs & Fit</a>
+    <a href="#prebook-promise" class="nav-link">₹0 Prebook</a>
+    <a href="#reviews" class="nav-link">Community</a>
+  </nav>
+
+  <!-- ========================================================================
+       HERO PRODUCT SECTION
+       ======================================================================== -->
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+
+        <!-- Left Column: Interactive 3D Shirt Pedestal -->
+        <div class="shirt-stage-wrap">
+          <div class="shirt-pedestal" id="shirtPedestal" title="Drag or tilt to inspect 3D silhouette">
+            <div class="shirt-image-wrapper" id="shirtImageWrapper">
+              <img src="assets/shirt_black.png" alt="Legion Risers Plain Polo Shirt in Onyx Black" class="product-shirt-img" id="heroShirtImg">
+              <div class="shirt-ground-shadow" id="shirtGroundShadow"></div>
+            </div>
+
+            <!-- Floating Interactive Specification Pills -->
+            <div class="spec-tag spec-tag-1">
+              <span class="spec-dot"></span>
+              <span>280 GSM French Terry</span>
+            </div>
+            <div class="spec-tag spec-tag-2">
+              <span class="spec-dot"></span>
+              <span>Precision Eagle Crest</span>
+            </div>
+            <div class="spec-tag spec-tag-3">
+              <span class="spec-dot"></span>
+              <span>Drop-Shoulder Relaxed Fit</span>
+            </div>
+          </div>
+
+          <div class="interaction-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.19"/>
+            </svg>
+            <span>Tilt or move cursor to inspect dynamic 3D drape</span>
+            <button id="replayIntroBtn" type="button" style="background: none; border: none; font-weight: 700; color: var(--apple-blue); cursor: pointer; margin-left: 10px; font-size: 0.75rem; text-decoration: underline; text-underline-offset: 2px;">Replay Unfold ↺</button>
+          </div>
+        </div>
+
+        <!-- Right Column: Product Narrative & Prebooking Configurator -->
+        <div class="hero-content">
+          <span class="product-eyebrow">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            Legion Risers × Nexure Studios
+          </span>
+
+          <h1 class="product-title">Legion Risers Plain Polo Shirt</h1>
+
+          <p class="product-tagline">
+            Engineered with a boxy drop-shoulder cut and woven from ultra-dense 280 GSM combed cotton. Featuring the signature Legion Risers eagle crest embroidered with millimetric precision.
+          </p>
+
+          <!-- Glass Pricing & Offer Card -->
+          <div class="offer-glass-card">
+            <div class="pricing-row">
+              <div class="price-main-block">
+                <span class="prebook-free-label">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Prebooking Free (₹0 Today)
+                </span>
+                <div class="price-display">
+                  <span class="price-currency">₹</span>
+                  <span class="price-amount">649</span>
+                  <span class="price-condition">Costs on Handover / Delivery</span>
+                </div>
+              </div>
+              <div class="offer-pill-badge">
+                <span>Zero Risk • Pay on Delivery</span>
+              </div>
+            </div>
+
+            <div class="offer-benefits-grid">
+              <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>₹0 Reservation</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>Free Pan-India Delivery</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>7-Day Size Exchange</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Color Swatch Picker -->
+          <div class="color-picker-box">
+            <div class="picker-header">
+              <span class="picker-label">Colorway:</span>
+              <span class="selected-color-name" id="selectedColorName">Onyx Black</span>
+            </div>
+            <div class="color-swatches-row" role="radiogroup" aria-label="Shirt Color Selector">
+              <button class="color-swatch-btn swatch-black active" data-color="black" role="radio" aria-checked="true" aria-label="Onyx Black">
+                <span class="color-circle"></span>
+              </button>
+              <button class="color-swatch-btn swatch-red" data-color="red" role="radio" aria-checked="false" aria-label="Crimson Red">
+                <span class="color-circle"></span>
+              </button>
+              <button class="color-swatch-btn swatch-blue" data-color="blue" role="radio" aria-checked="false" aria-label="Pacific Blue">
+                <span class="color-circle"></span>
+              </button>
+              <button class="color-swatch-btn swatch-green" data-color="green" role="radio" aria-checked="false" aria-label="Alpine Green">
+                <span class="color-circle"></span>
+              </button>
+              <button class="color-swatch-btn swatch-white" data-color="white" role="radio" aria-checked="false" aria-label="Chalk White">
+                <span class="color-circle"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Size Selector -->
+          <div class="size-picker-box">
+            <div class="size-header">
+              <span class="picker-label">Select Size:</span>
+              <button class="size-guide-btn" id="openSizeGuideBtn" type="button">Size Guide & Fit Breakdown</button>
+            </div>
+            <div class="size-pills-row" role="radiogroup" aria-label="Shirt Size Selector">
+              <button class="size-pill-btn" data-size="S" role="radio" aria-checked="false">S</button>
+              <button class="size-pill-btn" data-size="M" role="radio" aria-checked="false">M</button>
+              <button class="size-pill-btn active" data-size="L" role="radio" aria-checked="true">L</button>
+              <button class="size-pill-btn" data-size="XL" role="radio" aria-checked="false">XL</button>
+              <button class="size-pill-btn" data-size="XXL" role="radio" aria-checked="false">XXL</button>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="hero-cta-group">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-79lbb0281v6wGuZJcJiOI1ALZtRpg7OwYL92tP1PJYvqsA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn-prebook-primary js-open-prebook">
+              <span>Prebook Now</span>
+              <span style="font-weight: 400; opacity: 0.85;">— ₹0 Free</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+
+            <a href="#scrollytelling" class="btn-explore-secondary">
+              <span>Explore Details</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SMOOTH SCROLLING SHIRT SHOWCASE (Scrollytelling Experience)
+         ======================================================================== -->
+    <section class="scrolly-section" id="scrollytelling">
+      <div class="section-header-center">
+        <span class="section-eyebrow">Scrollytelling Experience</span>
+        <h2 class="section-title">Engineered to Perfection</h2>
+        <p class="section-subtitle">
+          Scroll down to discover the architectural construction, luxury cotton drape, and hand-finished eagle insignia.
+        </p>
+      </div>
+
+      <div class="scrolly-grid">
+        <!-- Sticky Display Container on Left -->
+        <div class="sticky-shirt-display">
+          <div class="display-glass-container">
+            <span class="lens-badge" id="lensBadge">Full Silhouette • 360 View</span>
+            <img src="assets/shirt_black.png" alt="Legion Risers Polo View" class="display-lens-img" id="stickyLensImg">
+          </div>
+
+          <!-- Interactive Camera Control Pills -->
+          <div class="camera-controls-bar">
+            <button class="cam-pill-btn active" data-shot="front">Silhouette</button>
+            <button class="cam-pill-btn" data-shot="crest">Eagle Crest</button>
+            <button class="cam-pill-btn" data-shot="collar">Collar & Seam</button>
+            <button class="cam-pill-btn" data-shot="sleeve">Fabric Weave</button>
+          </div>
+        </div>
+
+        <!-- Scrollable Feature Story Cards on Right -->
+        <div class="feature-scroll-stack">
+          <!-- Step 1: Silhouette -->
+          <div class="feature-glass-panel highlighted" id="step1" data-shot="front">
+            <span class="feature-step-num">01 • SILHOUETTE & CUT</span>
+            <h3 class="feature-card-title">Drop-Shoulder Boxy Drape</h3>
+            <p class="feature-card-desc">
+              Tailored specifically to deliver a contemporary high-street silhouette. The lengthened sleeve cuffs and relaxed torso provide unrestricted movement with clean architectural lines.
+            </p>
+            <div class="feature-metrics-row">
+              <div class="metric-stat">
+                <span class="metric-stat-val">Relaxed</span>
+                <span class="metric-stat-lbl">Silhouette</span>
+              </div>
+              <div class="metric-stat">
+                <span class="metric-stat-val">Drop</span>
+                <span class="metric-stat-lbl">Shoulder</span>
+              </div>
+              <div class="metric-stat">
+                <span class="metric-stat-val">Pre-Shrunk</span>
+                <span class="metric-stat-lbl">Form Fit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Crest -->
+          <div class="feature-glass-panel" id="step2" data-shot="crest">
+            <span class="feature-step-num">02 • EMBROIDERY</span>
+            <h3 class="feature-card-title">High-Density Eagle Crest</h3>
+            <p class="feature-card-desc">
+              Positioned over the left chest, the Legion Risers wingspan emblem and "EST: 2026" script are reproduced with ultra-fine thread density, retaining surgical crispness wash after wash.
+            </p>
+            <div class="feature-metrics-row">
+              <div class="metric-stat">
+                <span class="metric-stat-val">12,000+</span>
+                <span class="metric-stat-lbl">Micro Stitches</span>
+              </div>
+              <div class="metric-stat">
+                <span class="metric-stat-val">No-Fray</span>
+                <span class="metric-stat-lbl">Poly Core</span>
+              </div>
+              <div class="metric-stat">
+                <span class="metric-stat-val">Clean</span>
+                <span class="metric-stat-lbl">Backing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Collar & Seam -->
+          <div class="feature-glass-panel" id="step3" data-shot="collar">
+            <span class="feature-step-num">03 • COLLAR ARCHITECTURE</span>
+            <h3 class="feature-card-title">Minimalist Ribbed Neckline</h3>
+            <p class="feature-card-desc">
+              Built with double-ply ribbing to prevent the dreaded collar curl. It sits flush and firm against the neck, effortlessly transitioning from streetwear layers to sharp smart-casual wear.
+            </p>
+            <div class="feature-metrics-row">
+              <div class="metric-stat">
+                <span class="metric-stat-val">2-Ply</span>
+                <span class="metric-stat-lbl">Rib Collar</span>
+              </div>
+              <div class="metric-stat">
+                <span class="metric-stat-val">Anti-Curl</span>
+                <span class="metric-stat-lbl">Internal Tape</span>
+              </div>
+              <div class="metric-stat">
+                <span class="metric-stat-val">Twin-Needle</span>
+                <span class="metric-stat-lbl">Shoulder Seam</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Fabric Weave -->
+          <div class="feature-glass-panel" id="step4" data-shot="sleeve">
+            <span class="feature-step-num">04 • MATERIALITY</span>
+            <h3 class="feature-card-title">280 GSM Heavyweight Terry</h3>
+            <p class="feature-card-desc">
+              Heavier than standard t-shirts, this 280 GSM French Terry cotton provides substantial drape without trapping body heat. Soft loopback interior feels silky against bare skin.
+            </p>
+            <div class="feature-metrics-row">
+              <div class="metric-stat">
+                <span class="metric-stat-val">280 GSM</span>
+                <span class="metric-stat-lbl">Weight</span>
+              </div>
+              <div class="metric-stat">
+                <span class="metric-stat-val">100% Cotton</span>
+                <span class="metric-stat-lbl">Combed Yarn</span>
+              </div>
+              <div class="metric-stat">
+                <span class="metric-stat-val">Zero Bleed</span>
+                <span class="metric-stat-lbl">Color Fast</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         CRAFTSMANSHIP & ANATOMY BENTO GRID (Apple Keynote Style)
+         ======================================================================== -->
+    <section class="anatomy-section" id="anatomy">
+      <div class="section-header-center">
+        <span class="section-eyebrow">Luxury Standards</span>
+        <h2 class="section-title">Anatomy of an Essential</h2>
+        <p class="section-subtitle">Every stitch, fold, and seam is calibrated for luxury longevity.</p>
+      </div>
+
+      <div class="craft-bento-grid">
+        <!-- Bento 1: Macro Crest (Span 2) -->
+        <div class="bento-card span-2">
+          <div class="bento-img-wrap" style="height: 260px;">
+            <img src="assets/detail_embroidery.png" alt="Legion Risers Chest Embroidery" class="bento-img">
+          </div>
+          <div>
+            <span class="bento-pill-tag">Insignia Engineering</span>
+            <h3 class="bento-heading">Subtle Boldness: The 2026 Eagle Insignia</h3>
+            <p class="bento-body">
+              Designed in collaboration with Nexure Studios, the eagle motif symbolizes ascendancy and precision. Laser-aligned on the left chest to accent your natural shoulder taper.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bento 2: Collar & Seam -->
+        <div class="bento-card">
+          <div class="bento-img-wrap">
+            <img src="assets/detail_collar.png" alt="Collar Construction" class="bento-img">
+          </div>
+          <div>
+            <span class="bento-pill-tag">Collar Spec</span>
+            <h3 class="bento-heading">Anti-Sag Ribbed Neck</h3>
+            <p class="bento-body">
+              Reinforced herringbone necktape prevents stretching even after 100+ wash cycles.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bento 3: Sleeve Finishing -->
+        <div class="bento-card">
+          <div class="bento-img-wrap">
+            <img src="assets/detail_sleeve.png" alt="Sleeve Hem" class="bento-img">
+          </div>
+          <div>
+            <span class="bento-pill-tag">Sleeve Finish</span>
+            <h3 class="bento-heading">Elongated Drop Hem</h3>
+            <p class="bento-body">
+              Drop sleeves fall cleanly right above the elbow for that sought-after Tokyo and Milan street aesthetic.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bento 4: Zero Risk COD Prebooking (Span 2) -->
+        <div class="bento-card span-2" style="background: linear-gradient(135deg, #ffffff, #f7f9fd);">
+          <div>
+            <span class="bento-pill-tag" style="background: rgba(52, 199, 89, 0.12); color: var(--apple-green);">Zero Risk Philosophy</span>
+            <h3 class="bento-heading">Reserve For Free. Pay When You Wear It.</h3>
+            <p class="bento-body" style="max-width: 650px;">
+              We believe in our craftsmanship. That's why we don't ask for a single rupee in advance. Prebook with ₹0 today, inspect the fabric upon delivery, and hand over ₹649 only if completely satisfied.
+            </p>
+          </div>
+          <div style="margin-top: 24px;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-79lbb0281v6wGuZJcJiOI1ALZtRpg7OwYL92tP1PJYvqsA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn-prebook-primary js-open-prebook" style="display: inline-flex; width: auto; padding: 14px 28px;">
+              Prebook Free Now →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         ZERO-RISK PREBOOKING LEDGER PROMISE
+         ======================================================================== -->
+    <section class="prebooking-promise-section" id="prebook-promise">
+      <div class="promise-hero-card">
+        <div class="promise-inner-grid">
+          <!-- Left: Narrative -->
+          <div class="promise-text-block">
+            <span class="zero-fee-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              100% Risk Free Pre-Reservation
+            </span>
+            <h2 class="promise-title">₹0 Down Today.<br>₹649 on Delivery.</h2>
+            <p class="promise-desc">
+              Direct-to-consumer luxury without middlemen markups. Fill out the quick prebooking form, choose your preferred colorway and size, and secure your batch 01 reservation immediately.
+            </p>
+            <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-top: 8px;">
+              <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>Zero advance payment</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>Pay via UPI or Cash on arrival</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>Doorstep size exchange</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Pricing Ledger -->
+          <div class="pricing-ledger">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 12px;">
+              <strong style="font-size: 1rem;">Order Transparency</strong>
+              <span style="font-size: 0.75rem; color: var(--apple-blue); font-weight: 600;">BATCH 01 SPECIAL</span>
+            </div>
+
+            <div class="ledger-row">
+              <span>Plain Polo Shirt (M.R.P.)</span>
+              <span style="text-decoration: line-through; color: var(--text-tertiary);">₹1,499</span>
+            </div>
+
+            <div class="ledger-row">
+              <span>Prebook Early Bird Price</span>
+              <span style="font-weight: 600;">₹649</span>
+            </div>
+
+            <div class="ledger-row">
+              <span>Pan-India Priority Shipping</span>
+              <span class="ledger-free-tag">FREE</span>
+            </div>
+
+            <div class="ledger-row total-today">
+              <span>Due Right Now (Prebook)</span>
+              <span style="color: var(--apple-green); font-size: 1.35rem;">₹0</span>
+            </div>
+
+            <div class="ledger-row total-cod">
+              <span>Amount Due on Delivery:</span>
+              <span style="font-size: 1.15rem;">₹649</span>
+            </div>
+
+            <div class="ledger-cta-wrap">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-79lbb0281v6wGuZJcJiOI1ALZtRpg7OwYL92tP1PJYvqsA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="ledger-btn-submit js-open-prebook">
+                <span>Confirm Free Prebook</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <p class="ledger-trust-note">No credit card required. Free cancellation anytime.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         COMMUNITY & VERIFIED PRE-ORDERS
+         ======================================================================== -->
+    <section class="anatomy-section" id="reviews" style="padding-top: 20px;">
+      <div class="section-header-center">
+        <span class="section-eyebrow">Early Access Club</span>
+        <h2 class="section-title">Reserved by Connoisseurs</h2>
+        <p class="section-subtitle">Real feedback from tastemakers who previewed the initial sample run.</p>
+      </div>
+
+      <div class="craft-bento-grid">
+        <div class="bento-card">
+          <div style="display: flex; gap: 4px; color: #ffb300; margin-bottom: 12px;">★★★★★</div>
+          <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;">"The weight of the cotton is unreal."</h4>
+          <p class="bento-body">"I was skeptical about a polo priced at ₹649, but this feels identical to 4,000 rupee luxury tees. The drop-shoulder drape falls so cleanly."</p>
+          <div style="margin-top: 18px; font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">— Aryan K., Bangalore • Onyx Black (L)</div>
+        </div>
+
+        <div class="bento-card">
+          <div style="display: flex; gap: 4px; color: #ffb300; margin-bottom: 12px;">★★★★★</div>
+          <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;">"Zero risk made it an easy decision."</h4>
+          <p class="bento-body">"Paying ₹0 to book and only ₹649 when it reaches my door gave me complete peace of mind. The white embroidery on the navy blue is stunning."</p>
+          <div style="margin-top: 18px; font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">— Vikram S., Mumbai • Pacific Blue (XL)</div>
+        </div>
+
+        <div class="bento-card">
+          <div style="display: flex; gap: 4px; color: #ffb300; margin-bottom: 12px;">★★★★★</div>
+          <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;">"Collar stays razor sharp."</h4>
+          <p class="bento-body">"Most polos lose collar stiffness after three washes. The reinforced internal ribbing on this Legion Risers piece is top shelf craftsmanship."</p>
+          <div style="margin-top: 18px; font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">— Rohith M., Hyderabad • Crimson Red (M)</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER & PARTNERSHIP
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-logo-group">
+          <img src="assets/legion_risers_clean.png" alt="Legion Risers Logo" class="footer-logo-lr">
+          <span class="footer-divider-x">×</span>
+          <img src="assets/nexure_studios_clean.png" alt="Nexure Studios Logo" class="footer-logo-nexure">
+        </div>
+        <div class="footer-text-meta">
+          <strong>Legion Risers Couture</strong> in partnership with <strong>Nexure Studios</strong>.<br>
+          All rights reserved. Designed with Apple Cupertino Human Interface Guidelines.
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero" class="footer-link">Top</a>
+        <a href="#scrollytelling" class="footer-link">Craft</a>
+        <a href="#anatomy" class="footer-link">Sizing</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-79lbb0281v6wGuZJcJiOI1ALZtRpg7OwYL92tP1PJYvqsA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="footer-link" style="color: var(--apple-blue); font-weight: 600;">Google Prebook Form ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       iOS NATIVE BOTTOM SHEET (Prebook Drawer)
+       ======================================================================== -->
+  <div class="sheet-overlay" id="sheetOverlay">
+    <div class="ios-bottom-sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+      <div class="sheet-grab-bar"></div>
+
+      <div class="sheet-header">
+        <h3 class="sheet-heading" id="sheetTitle">Confirm Reservation</h3>
+        <button class="modal-close-btn" id="closeSheetBtn" aria-label="Close Prebook Sheet">✕</button>
+      </div>
+
+      <!-- Item Preview -->
+      <div class="sheet-item-card">
+        <img src="assets/shirt_black.png" alt="Shirt Preview" class="sheet-thumb" id="sheetThumb">
+        <div class="sheet-item-info">
+          <span class="sheet-item-name">Legion Risers Plain Polo Shirt</span>
+          <span class="sheet-item-config" id="sheetConfig">Onyx Black • Size L (Drop-Shoulder Relaxed)</span>
+          <span style="font-size: 0.75rem; color: var(--apple-green); font-weight: 700; margin-top: 4px;">✓ Prebooking Free</span>
+        </div>
+      </div>
+
+      <!-- Pricing Summary -->
+      <div class="sheet-summary-box">
+        <div class="sheet-row">
+          <span>Reservation Fee Today</span>
+          <strong style="color: var(--apple-green);">₹0 (FREE)</strong>
+        </div>
+        <div class="sheet-row">
+          <span>Priority Express Shipping</span>
+          <span style="color: var(--apple-green); font-weight: 600;">FREE</span>
+        </div>
+        <div class="sheet-row">
+          <span>Pay on Delivery (COD/UPI)</span>
+          <span style="font-weight: 700;">₹649</span>
+        </div>
+        <div class="sheet-row highlight">
+          <span>Total Payable Right Now</span>
+          <span style="color: var(--apple-green); font-size: 1.25rem;">₹0</span>
+        </div>
+      </div>
+
+      <!-- Action Button directly to Google Forms -->
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-79lbb0281v6wGuZJcJiOI1ALZtRpg7OwYL92tP1PJYvqsA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="sheet-cta-btn">
+        <span>Proceed to Google Form</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+
+      <p class="sheet-footnote">You will be taken to the official Legion Risers Google Prebook Form. Takes 30 seconds.</p>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SIZE GUIDE MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="sizeGuideModal">
+    <div class="modal-window">
+      <div class="modal-header-row">
+        <h3 class="modal-title">Size Guide & Fit Matrix</h3>
+        <button class="modal-close-btn" id="closeSizeGuideBtn" aria-label="Close size guide">✕</button>
+      </div>
+      <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px;">
+        The Legion Risers Plain Polo features an oversized drop-shoulder cut. If you prefer a regular tailored fit, consider sizing down one step.
+      </p>
+
+      <table class="size-table">
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Chest (Inches)</th>
+            <th>Length (Inches)</th>
+            <th>Sleeve (Drop)</th>
+            <th>Recommended Height</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>S</strong></td>
+            <td>38" - 40"</td>
+            <td>28.0"</td>
+            <td>9.0"</td>
+            <td>5'5" – 5'8"</td>
+          </tr>
+          <tr>
+            <td><strong>M</strong></td>
+            <td>40" - 42"</td>
+            <td>29.0"</td>
+            <td>9.5"</td>
+            <td>5'8" – 5'10"</td>
+          </tr>
+          <tr>
+            <td><strong>L (Most Popular)</strong></td>
+            <td>42" - 44"</td>
+            <td>30.0"</td>
+            <td>10.0"</td>
+            <td>5'10" – 6'1"</td>
+          </tr>
+          <tr>
+            <td><strong>XL</strong></td>
+            <td>44" - 46"</td>
+            <td>31.0"</td>
+            <td>10.5"</td>
+            <td>6'0" – 6'3"</td>
+          </tr>
+          <tr>
+            <td><strong>XXL</strong></td>
+            <td>46" - 48"</td>
+            <td>32.0"</td>
+            <td>11.0"</td>
+            <td>6'2"+</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top: 24px; padding: 14px; background: var(--bg-tertiary); border-radius: 14px; font-size: 0.8rem; color: var(--text-secondary);">
+        💡 <strong>Fit Tip:</strong> Free doorstep exchange within 7 days if the size doesn't fit your desired silhouette.
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       iOS FLOATING DOCK (Bottom Controls)
+       ======================================================================== -->
+  <div class="ios-dock-container">
+    <div class="ios-dock">
+      <!-- Quick Color Swatches in Dock -->
+      <div class="dock-colors-preview" title="Quick Colorway Switch">
+        <span class="dock-color-dot dock-dot-black" data-color="black" title="Onyx Black"></span>
+        <span class="dock-color-dot dock-dot-red" data-color="red" title="Crimson Red"></span>
+        <span class="dock-color-dot dock-dot-blue" data-color="blue" title="Pacific Blue"></span>
+        <span class="dock-color-dot dock-dot-green" data-color="green" title="Alpine Green"></span>
+        <span class="dock-color-dot dock-dot-white" data-color="white" title="Chalk White"></span>
+      </div>
+
+      <!-- Pricing Indicator -->
+      <div class="dock-price-chip">
+        <span class="dock-price-free">₹0 Today</span>
+        <span class="dock-price-cod">₹649 COD</span>
+      </div>
+
+      <!-- Primary Prebook Button -->
+      <button class="dock-prebook-btn js-open-prebook">
+        <span>Prebook Now</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+
+      <!-- Share Sheet Trigger -->
+      <button class="dock-icon-btn" id="shareBtn" aria-label="Share product" title="Share with friends">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+          <polyline points="16 6 12 2 8 6"/>
+          <line x1="12" y1="2" x2="12" y2="15"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
